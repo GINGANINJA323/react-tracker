@@ -1,5 +1,7 @@
+// @flow
+
 import './App.css';
-import React from 'react';
+import * as React from 'react';
 import Calendar from 'react-calendar';
 
 const styles = {
@@ -13,14 +15,18 @@ const styles = {
   }
 }
 
-class App extends React.Component {
-  constructor(props) {
+type Props = {};
+
+type State = {};
+
+class App extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {};
   }
 
-  render() {
+  render(): React.Node {
     return (
       <div className='App'>
         <header style={styles.header}>

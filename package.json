@@ -73,7 +73,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "flow": "flow"
   },
   "eslintConfig": {
     "extends": [
@@ -147,7 +148,13 @@
   },
   "babel": {
     "presets": [
-      "react-app"
+      "react-app",
+      "@babel/preset-flow"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/preset-flow": "^7.12.13",
+    "flow-bin": "^0.144.0"
   }
 }
