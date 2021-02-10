@@ -22,7 +22,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <header style={styles.header}>
           <h1 style={styles.text}>{'React Time Planner'}</h1>
         </header>
