@@ -3,6 +3,7 @@
 import './App.css';
 import * as React from 'react';
 import Calendar from 'react-calendar';
+import DetailsModal from './components/details-modal';
 
 const styles = {
   text: {
@@ -17,13 +18,17 @@ const styles = {
 
 type Props = {};
 
-type State = {};
+type State = {
+  detailsOpen: boolean
+};
 
 class App extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      detailsOpen: false
+    };
   }
 
   render(): React.Node {
@@ -37,6 +42,10 @@ class App extends React.Component<Props, State> {
             minDetail={'month'}
           />
         </div>
+        <DetailsModal
+          isOpen={this.state.detailsOpen} 
+          handleClose={() => this.setState({ detailsOpen: false })}
+        />
       </div>
     );
   }
