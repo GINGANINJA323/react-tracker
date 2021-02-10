@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Calendar from 'react-calendar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const styles = {
+  text: {
+    color: 'white'
+  },
+
+  header: {
+    position: 'absolute',
+    top: '5%'
+  }
+}
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header style={styles.header}>
+          <h1 style={styles.text}>{'React Time Planner'}</h1>
+        </header>
+        <div>
+          <Calendar
+            minDetail={'month'}
+          />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
